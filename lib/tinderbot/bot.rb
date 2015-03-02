@@ -13,6 +13,7 @@ module Tinderbot
           recommended_users.each { |user|
             @client.like user
             csv << [user.id,user.name,user.bio,user.birth_date,user.photo_urls]
+            sleep(1.0)
           }
           recommended_users = @client.recommended_users
         end

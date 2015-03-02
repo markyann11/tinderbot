@@ -114,3 +114,7 @@ Feel free to contribute!
 
 ## License
 Released under the MIT License, which can be found in `LICENSE.txt`.
+
+
+sudo gem install specific_install
+sudo gem specific_install https://github.com/markyann11/tinderbot

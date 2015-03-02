@@ -8,7 +8,7 @@ module Tinderbot
 
     def like_recommended_users
       recommended_users = @client.recommended_users
-      CSV.open("mycsvfile.csv", "w") do |csv|
+      CSV.open("tinder_users_db.csv", "ab") do |csv|
         while recommended_users
           recommended_users.each { |user|
             @client.like user
@@ -16,7 +16,7 @@ module Tinderbot
           }
           recommended_users = @client.recommended_users
         end
-        #        csv << ["row", "of", "CSV", "data"]
+
       end
 
     end
